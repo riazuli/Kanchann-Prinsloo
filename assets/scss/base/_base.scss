@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../webfonts/CenturyGothic.eot");
+  src: url("../webfonts/CenturyGothic.eot?#iefix") format("embedded-opentype"),
+    url("../webfonts/CenturyGothic.woff2") format("woff2"),
+    url("../webfonts/CenturyGothic.woff") format("woff"),
+    url("../webfonts/CenturyGothic.ttf") format("truetype"),
+    url("../webfonts/CenturyGothic.svg#CenturyGothic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std";
+  src: url("../webfonts/HelveticaNeueLTStd-Roman.eot");
+  src: url("../webfonts/HelveticaNeueLTStd-Roman.eot?#iefix")
+      format("embedded-opentype"),
+    url("../webfonts/HelveticaNeueLTStd-Roman.woff2") format("woff2"),
+    url("../webfonts/HelveticaNeueLTStd-Roman.woff") format("woff"),
+    url("../webfonts/HelveticaNeueLTStd-Roman.ttf") format("truetype"),
+    url("../webfonts/HelveticaNeueLTStd-Roman.svg#HelveticaNeueLTStd-Roman")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+  position: relative;
+}
+body {
+  padding-top: 109px;
+  font-family: $primaryFont;
+  color: $secondaryColorBlack;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 15px;
+  @include sm {
+    padding-top: 97px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0 0 15px;
+  line-height: 1.2;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+button:focus {
+  outline: 0 solid;
+}
+.spacer-20 {
+  height: 20px;
+}
+.spacer-30 {
+  height: 30px;
+}
+.spacer-40 {
+  height: 40px;
+}
+.section-padding {
+  padding: 90px 0px;
+  @include sm {
+    padding: 50px 0px;
+  }
+}
+.section-padding-bottom {
+  padding-bottom: 90px;
+  @include sm {
+    padding-bottom: 50px;
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  @include md {
+    margin-bottom: 40px;
+  }
+  @include sm {
+    margin-bottom: 30px;
+  }
+  .icon {
+    font-size: 50px;
+    color: $primaryColorGreen;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-size: 36px;
+    position: relative;
+    color: $secondaryColorNavy;
+    @include md {
+      font-size: 32px;
+    }
+    @include sm {
+      font-size: 28px;
+    }
+  }
+  &.white {
+    color: $white;
+    h2 {
+      color: $white;
+    }
+  }
+
+  &.bordered {
+    margin-bottom: 0;
+    h2 {
+      position: relative;
+      padding-bottom: 15px;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 120px;
+        height: 2px;
+        background-color: $primaryColorBlue;
+      }
+    }
+  }
+}
+
+.primary-button {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 25px;
+  background-color: transparent;
+  color: $white;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  min-width: 220px;
+  position: relative;
+  border: 2px solid $primaryColorGreen;
+  font-family: $secondaryFont;
+  z-index: 1;
+  @include sm {
+    min-width: 160px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primaryColorGreen;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: all 0.3s ease-out;
+    z-index: -1;
+  }
+  &.white {
+    background-color: $white;
+    color: $primaryColorBlue;
+    &:hover {
+      background-color: transparent;
+      color: $white;
+    }
+  }
+  &.full-width {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+  }
+  &.m-width {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &.black {
+    color: $secondaryColorBlack;
+  }
+  &.color {
+    color: $primaryColorBlue;
+  }
+  &.colored {
+    background-color: $primaryColorGreen;
+    &:hover {
+      color: $white;
+      background-color: $secondary;
+      border-color: $secondary;
+      &::before {
+        transform: scaleX(0);
+      }
+    }
+  }
+  &:hover {
+    background-color: transparent;
+    color: $white;
+    &:before {
+      transform: scaleX(1);
+    }
+  }
+}
+.gradient-button {
+  border: 0px;
+  min-width: 150px;
+  padding: 8px 20px;
+  display: inline-block;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    lighten($primaryColorBlue, 10) 0%,
+    $primaryColorYellow 100%
+  );
+  color: $white;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $white;
+    background: linear-gradient(
+      -90deg,
+      lighten($primaryColorBlue, 10) 0%,
+      $primaryColorYellow 100%
+    );
+  }
+}
+
+.separator {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: $white;
+  h4 {
+    text-transform: uppercase;
+    padding: 0px 15px;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 100%;
+    margin: 0;
+    flex: 0 1 auto;
+  }
+  .separator-holder {
+    height: 1px;
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 10%;
+    .separator-line {
+      height: 1px;
+      border-top: 1px solid lighten($primaryColorYellow, 30);
+      display: block;
+      position: relative;
+      top: 1px;
+      width: 100%;
+    }
+  }
+}
+
+.list {
+  list-style: none;
+  li {
+    &::before {
+      content: "\2022";
+      color: $primaryColorBlue;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+}
+.inline-link {
+  text-decoration: underline;
+  color: $primaryColorBlue;
+  transition: all 0.3s ease;
+  &:hover {
+    color: ligten($primaryColorYellow, 10);
+  }
+}
+
+.sub-title {
+  font-size: 18px;
+  font-family: $centuryGothic;
+  font-weight: normal;
+  color: $primaryColorGreen;
+}
+
+.title {
+  font-family: $centuryGothic;
+  font-weight: normal;
+  font-size: 36px;
+  padding-bottom: 30px;
+  @include sm{
+    font-size: 30px;
+  }
+}
+.widget-title{
+  font-family: $centuryGothic;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 20px;
+  @include md{
+    padding-top: 25px;
+  }
+}

@@ -1,0 +1,17 @@
+.brand-section {
+  background-color: $primaryColorBlue;
+  padding: 150px 0px;
+  @include sm{
+    padding: 50px 0px;
+  }
+  .logo {
+    margin: 20px 0px;
+    img {
+      max-width: 200px;
+      margin: 0 auto;
+      @include sm{
+        width: 100%;
+      }
+    }
+  }
+}

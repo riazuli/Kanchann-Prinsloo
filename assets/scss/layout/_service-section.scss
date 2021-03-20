@@ -1,0 +1,28 @@
+.service-section {
+  .single-service {
+    text-align: center;
+    padding: 20px 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    @include md{
+      height: auto;
+    }
+    .icon {
+      font-size: 30px;
+      padding-bottom: 15px;
+      color: $primaryColorGreen;
+    }
+    h4 {
+      font-family: $centuryGothic;
+      font-weight: normal;
+      font-size: 18px;
+    }
+    a {
+      display: inline-block;
+      color: $primaryColorBlue;
+      font-weight: normal;
+    }
+  }
+}

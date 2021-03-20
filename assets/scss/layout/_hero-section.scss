@@ -1,0 +1,42 @@
+.hero-section {
+  background-color: $secondaryColorNavy;
+  background-image: url(../img/banner-img.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  .hero-text {
+    text-align: center;
+    color: $white;
+    padding-top: 50px;
+    img {
+      &.icon-logo {
+        max-width: 70px;
+        margin-bottom: 20px;
+      }
+    }
+    h1 {
+      font-family: $centuryGothic;
+      font-size: 35px;
+      font-weight: normal;
+      @include sm {
+        font-size: 28px;
+      }
+    }
+    h3 {
+      font-family: 'Helvetica Neue LT Std';
+      font-weight: normal;
+      font-size: 24px;
+      display: inline-block;
+      padding: 15px 0px;
+      margin: 30px 0px 40px;
+      border-top: 1px solid $primaryColorGreen;
+      border-bottom: 1px solid $primaryColorGreen;
+      font-weight: 400;
+      text-transform: uppercase;
+      @include sm {
+        font-size: 18px;
+      }
+    }
+  }
+}

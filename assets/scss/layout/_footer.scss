@@ -1,0 +1,56 @@
+.footer {
+  background-color: $primaryColorBlue;
+  color: darken($white, 15);
+  .logo {
+    padding-bottom: 20px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: block;
+      a {
+        color: darken($white, 15);
+        padding: 5px 0px;
+        display: block;
+        transition: all 0.3s ease;
+        &:hover {
+          color: darken($white, 15);
+          opacity: 0.8;
+        }
+        i.fa {
+          color: $primaryColorGreen;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+  i.fa {
+    margin-right: 5px;
+  }
+}
+.footer-bottom {
+  background-color: darken($primaryColorBlue, 4);
+  color: darken($white, 15);
+  padding: 10px;
+  @include sm {
+    text-align: center;
+  }
+  a {
+    display: inline-block;
+    padding: 2px;
+    color: darken($white, 15);
+    transition: all 0.3s ease;
+    &:hover {
+      color: darken($white, 15);
+      opacity: 0.8;
+    }
+  }
+  .footer-right {
+    text-align: right;
+    @include sm {
+      text-align: center;
+      padding-top: 5px;
+    }
+  }
+}

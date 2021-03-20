@@ -1,0 +1,36 @@
+.testimonial-section {
+  background-color: lighten($quinary, 10);
+  .single-testimonial {
+    .quote {
+      position: relative;
+      text-align: center;
+      padding-left: 30px;
+      padding-bottom: 20px;
+      @include md{
+        padding-bottom: 5px;
+      }
+      i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 20px;
+        color: $primaryColorGreen;
+      }
+    }
+    .author {
+      position: relative;
+      padding-left: 40px;
+      font-weight: 600;
+      font-size: 18px;
+      @include md{
+        text-align: center;
+        padding-bottom: 25px;
+      }
+      img {
+        max-width: 60px;
+        border-radius: 50px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

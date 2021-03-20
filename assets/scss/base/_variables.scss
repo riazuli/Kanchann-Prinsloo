@@ -1,0 +1,81 @@
+// Fonts
+
+$primaryFont: 'Open Sans', sans-serif;
+$secondaryFont: 'Open Sans', sans-serif;
+$menuFont: "Open Sans", sans-serif;
+$centuryGothic: "Century Gothic";
+
+// Colors
+$primaryColorBlue: #1e2839;
+$primaryColorGreen: #78ae46;
+$secondary: #c3825d;
+$tertiary: #634c66;
+$quaternary: #84362e;
+$quinary: #e2d0cf;
+$primaryColorYellow: #eac63b;
+$secondaryColorNavy: #333746;
+$secondaryColorBlack: #1e2838;
+$secondaryColorRed: #d84442;
+$secondaryColorPurple: #865e9c;
+$blueColor: #1d44f9;
+$navyColor: #2d3561;
+$yellowColor: #ffe37b;
+$pinkColor: #fbf0e9;
+$redColor: #ca0055;
+$grayColor: #dbdfef;
+$offwhiteColor: #F5F5F5;
+$white: #ffffff;
+$black: #000000;
+
+// Mobile layout (landscape view)
+$screen-mobile-max: 767px;
+
+// tablets  min(portrait view)
+$screen-tab-min: 768px;
+
+// tablets  max(portrait view)
+$screen-tab-max: 991px;
+
+// Medium devices min
+$screen-md-min: 992px;
+
+// Medium devices max
+$screen-md-max: 1200px;
+
+// Large devices max
+$screen-xl-min: 1400px;
+
+// Mobile devices
+@mixin sm {
+  @media only screen and (max-width: #{$screen-mobile-max}) {
+    @content;
+  }
+}
+
+// Tablet devices
+@mixin md {
+  @media only screen and (max-width: #{$screen-tab-max}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media only screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media only screen and (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media only screen and (min-width: $screen+"px") {
+    @content;
+  }
+}

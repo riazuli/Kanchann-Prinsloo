@@ -1,0 +1,107 @@
+.cta-book-section {
+  padding-top: 50px;
+  position: relative;
+  @include sm {
+    padding-top: 0;
+  }
+  .book-wrap {
+    position: relative;
+    bottom: -30%;
+    @include lg {
+      bottom: -50%;
+    }
+    @include md {
+      bottom: 0;
+    }
+    @include sm {
+      bottom: 0;
+    }
+    img {
+      @include md {
+        max-width: 400px;
+        width: 100%;
+      }
+    }
+  }
+  .cta-title {
+    padding-top: 50px;
+    @include sm {
+      padding-top: 30px;
+    }
+    h2 {
+      font-family: $centuryGothic;
+      color: $primaryColorGreen;
+      font-weight: normal;
+      font-size: 46px;
+      @include sm {
+        font-size: 32px;
+      }
+      span {
+        color: $tertiary;
+        font-weight: bold;
+        display: block;
+        font-size: 26px;
+        @include sm {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .offwhite-bg {
+    padding: 30px 0px 20px;
+    background-color: lighten($quinary, 5);
+  }
+
+  &.colored {
+    background-color: $primaryColorGreen;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-top: 50px solid $white;
+    }
+    .cta-title {
+      color: $white;
+      h2 {
+        color: lighten($primaryColorYellow, 10);
+        span {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+.astra-form {
+  label {
+    margin-bottom: 5px;
+  }
+  .form-control {
+    border: 1px solid lighten($secondaryColorBlack, 40);
+    padding: 22px 15px;
+    width: 100%;
+    &.has-icon {
+      padding: 22px 30px;
+    }
+  }
+  &.white {
+    label {
+      color: $white;
+    }
+  }
+  .form-group {
+    position: relative;
+    .icon {
+      position: absolute;
+      bottom: 10px;
+      left: 15px;
+      font-size: 16px;
+      color: $secondaryColorNavy;
+    }
+  }
+}
